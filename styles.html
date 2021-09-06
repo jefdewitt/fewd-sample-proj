@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FEWD Rocks</title>
+    <link rel="stylesheet" href="main.css" />
+    <style>
+      .bella {
+        width: 10%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Adding Styles in HTML</h1>
+    <h2>Example 1: (Best Practice)</h2>
+    <p>
+      The styles for this image are kept in a separate file, known as a
+      stylesheet. Note the link in the head of this document. In it, the
+      relative path is used, similar to the 'src' attribute in an img html
+      element.
+    </p>
+    <img src="images/IMG_5319.jpeg" alt="Bella doing it again." />
+    <h2>Example 2: (Inline - Highest Precedence)</h2>
+    <p>
+      The styles for this image are inline. Don't do this. Styles applied this
+      way take precedence over styles from tags and separate stylesheets. This
+      method makes applying uniform styles very difficult.
+    </p>
+    <img
+      src="images/IMG_5319.jpeg"
+      alt="Bella doing it again."
+      style="width: 25%"
+    />
+    <p>Note the styles for this image tag are overruling the stylesheet.</p>
+    <h2>Example 3: (Style Tag in Head)</h2>
+    <p>
+      The styles for this image are in the head fo the document. These styles
+      are still higher order than the stylesheet but not as much as inine styles
+      (remember, DON'T do that, ha), so you'll notice the image is smaller than
+      the rule applied from the stylesheet.
+    </p>
+    <img
+      class="bella"
+      src="images/IMG_5319.jpeg"
+      alt="Bella doing it again."
+    />
+    <p>Note the styles for this image tag are targeted via a class selector.</p>
+    <p>Take me back <a href="index.html">home</a>.</p>
+  </body>
+</html>
